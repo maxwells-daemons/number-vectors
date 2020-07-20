@@ -1,0 +1,69 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#container {
+  width: 600px;
+  height: 800px;
+}
+
+#viz {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#viz canvas {
+  width: calc(100% - 80px);
+  margin: 105px 20px 0px 60px;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: pixelated;
+}
+
+#viz svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+#viz svg #margin-background {
+  fill: #d1c4e9;
+  stroke: black;
+}
+
+#viz svg .mouse-loc {
+  font: 20px sans-serif;
+  text-anchor: middle;
+}
+
+#viz svg #tooltip-text {
+  font: 14px sans-serif;
+}
+
+#viz svg line.marginal {
+  shape-rendering: optimizeSpeed;
+  stroke: black;
+  stroke-width: 2;
+}
+
+#viz svg line.marginal.hover {
+  stroke: red;
+  stroke-width: 4;
+}
+
+#viz svg #click-col {
+  clip-path: url(#marginal-clip);
+  stroke: #ffdc2d;
+  stroke-width: 3;
+}
