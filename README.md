@@ -2,7 +2,7 @@
 
 ![GloVe similarities of numbers 0 through 512](./img/similarities-512.png)
 
-[Run this demo in browser](https://maxwells-daemons.github.io/number-vectors/) (warning: 32MB website!)
+[Run this demo in browser](https://maxwells-daemons.github.io/number-vectors/)!
 
 A small program to plot the semantic similarities of numbers using GloVe.
 Numbers are well-ordered, so this produces a cohesive 2D plot, unlike other word vector visualizations.
