@@ -21,7 +21,7 @@ body {
   height: 100%;
 }
 
-#viz canvas {
+#viz #main-canvas {
   width: calc(100% - 80px);
   margin: 105px 20px 0px 60px;
   -ms-interpolation-mode: nearest-neighbor;

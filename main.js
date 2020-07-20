@@ -57,7 +57,12 @@ async function main() {
   const fileBufferPromise = d3.buffer("upper-uint8-2100.dta", {cache: "force-cache"});
 
   // We'll draw the full-res image into a buffer and re-render from there on zoom
-  const offscreenCanvas = new OffscreenCanvas(N_NUMS, N_NUMS);
+  // Not supported in Firefox :(
+  // const offscreenCanvas = new OffscreenCanvas(N_NUMS, N_NUMS);
+  const offscreenCanvas = d3.create("canvas")
+    .attr("width", N_NUMS)
+    .attr("height", N_NUMS)
+    .node();
   const offscreenContext = offscreenCanvas.getContext("2d");
   offscreenContext.imageSmoothingEnabled = false;
 
